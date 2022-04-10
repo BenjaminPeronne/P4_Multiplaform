@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/undraw_gaming_re_cma2" />
+        app:srcCompat="@drawable/gaming_welcome" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/undraw_handcrafts_welcome_2" />
+        app:srcCompat="@drawable/welcome" />
 
     <TextView
         android:id="@+id/textView"
@@ -67,8 +67,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="52dp"
         android:text="@string/coding_with_love_by_benjaminperonne"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
