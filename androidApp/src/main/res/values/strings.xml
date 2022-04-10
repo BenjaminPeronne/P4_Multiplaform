@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="presentationgame">PresentationGame</string>
+    <string name="welcome">Welcome</string>
+    <string name="coding_with_love_by_benjaminperonne">Coding with love by <font color='#00B0FF'>BenjaminPeronne</font></string>
+    <string name="connect_four">Connect Four</string>
+    <string name="continue_entrance">Continue</string>
+</resources>
