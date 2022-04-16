@@ -8,7 +8,10 @@ import java.util.*
 fun switchPageAfterDelay(activity: AppCompatActivity, delay: Long) {
     Timer().schedule(object : TimerTask() {
         override fun run() {
-            activity.startActivity(Intent(activity, LoginActivity::class.java))
+            // Start the next activity after the delay
+            activity.startActivity(Intent(activity, GameModeActivity::class.java))
+
+            // Finish the current activity
             activity.finish()
         }
     }, delay)
@@ -19,6 +22,7 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
+        // Call the function to switch to the next activity after a delay
         switchPageAfterDelay(this, 4000)
     }
 }
