@@ -8,32 +8,34 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/backgroundImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="110dp"
+        android:layout_marginBottom="112dp"
+        android:contentDescription="@string/select_player_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/select_player"
-        android:contentDescription="@string/select_player_image" />
+        app:srcCompat="@drawable/select_player" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="72dp"
         android:fontFamily="@font/lobster"
         android:text="@string/connect_four"
         android:textColor="@color/colorPrimary"
-        android:textSize="40sp"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toTopOf="@+id/player_1_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/subTitleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="135dp"
@@ -41,41 +43,68 @@
         android:text="@string/please_enter_the_name"
         app:layout_constraintBottom_toTopOf="@+id/player_1_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        app:layout_constraintVertical_bias="0.933" />
+
+    <ImageView
+        android:id="@+id/redCircle"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="38dp"
+        android:contentDescription="@string/redcircleplayer"
+        app:layout_constraintBottom_toTopOf="@+id/yellowCircle"
+        app:layout_constraintEnd_toStartOf="@+id/player_1_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/circle_red" />
 
     <EditText
         android:id="@+id/player_1_name"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="38dp"
         android:autofillHints=""
+        android:drawableTint="@color/colorRed"
         android:ems="10"
+        android:foregroundTint="@color/colorRed"
         android:inputType="textPersonName"
-        android:text="@string/player_1"
+        android:textColorLink="@color/colorRed"
         app:layout_constraintBottom_toTopOf="@+id/player_2_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/yellowCircle"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="61dp"
+        android:contentDescription="@string/yellowcircleplayer"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toStartOf="@+id/player_2_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/circle_yellow" />
 
     <EditText
         android:id="@+id/player_2_name"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="61dp"
         android:autofillHints=""
+        android:drawableTint="@color/colorYellow"
         android:ems="10"
+        android:foregroundTint="@color/colorYellow"
         android:inputType="textPersonName"
-        android:text="@string/player_2"
+        android:textColorLink="@color/colorYellow"
         app:layout_constraintBottom_toTopOf="@+id/startButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
