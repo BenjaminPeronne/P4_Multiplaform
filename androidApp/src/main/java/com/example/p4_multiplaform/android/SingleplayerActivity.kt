@@ -1,26 +1,22 @@
 package com.example.p4_multiplaform.android
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 
 @Suppress("DEPRECATION")
-class GameActivity : AppCompatActivity() {
+class SingleplayerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game)
+        setContentView(R.layout.activity_singleplayer)
 
         // Get the screen size
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
 
         val width = displayMetrics.widthPixels
-
-        // get the player names
-        val player1 = intent.getStringExtra("namePlayer1").toString()
-        val player2 = intent.getStringExtra("namePlayer2").toString()
 
         // Get the board
         val linearLayoutBoard = findViewById<LinearLayout>(R.id.board)
@@ -34,12 +30,10 @@ class GameActivity : AppCompatActivity() {
         // Get the current color LinearLayout
         val currentColor = findViewById<LinearLayout>(R.id.currentPlayerCircleColor)
 
-        val board = Multiplayer(
+        val board = Singleplayer(
             this,
             linearLayoutBoard,
             width,
-            player1,
-            player2,
             currentPlayer,
             currentColor,
             message
@@ -54,4 +48,3 @@ class GameActivity : AppCompatActivity() {
         }
     }
 }
-
