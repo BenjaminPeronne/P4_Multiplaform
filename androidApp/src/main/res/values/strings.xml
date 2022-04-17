@@ -2,12 +2,35 @@
 <resources>
     <string name="presentationgame">PresentationGame</string>
     <string name="welcome">Welcome</string>
-    <string name="coding_with_love_by_benjaminperonne">Coding with love by <font color='#00B0FF'>BenjaminPeronne</font></string>
+    <string name="coding_with_love_by_benjaminperonne">Coding with love by
+        <font color='#00B0FF'>BenjaminPeronne</font>
+    </string>
     <string name="connect_four">Connect Four</string>
     <string name="continue_entrance">Continue</string>
     <string name="start">Start</string>
     <string name="player_1">Player 1</string>
-    <string name="please_enter_the_name">Please enter the name</string>
+    <string name="please_enter_the_name">Please enter player names</string>
+    <string name="play_multi">Play with friend</string>
     <string name="player_2">Player 2</string>
     <string name="select_player_image">select_player_image</string>
+    <string name="app_name">Connect Four</string>
+    <string name="computerPlayer">To play against the computer</string>
+    <string name="friendPLayer">To play with a friend</string>
+    <string name="play_alone">Play Alone</string>
+    <string name="won">, won !!!</string>
+    <string name="draw">Draw</string>
+    <string name="playerTurn">, it\'s your turn</string>
+    <string name="currentPlayer">, it\'s your turn</string>
+
+    <string name="computer">Computer</string>
+    <string name="gameInfo">
+        Align
+        <b>4 pieces</b>
+        in a row is a <b>win</b>.
+    </string>
+    <string name="restart">Restart</string>
+    <string name="player1">Yellow PLayer</string>
+    <string name="player2">Red PLayer</string>
+    <string name="yellowcircleplayer">yellowCirclePlayer</string>
+    <string name="redcircleplayer">redCirclePlayer</string>
 </resources>

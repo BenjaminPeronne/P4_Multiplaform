@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_size">42sp</dimen>
+    <dimen name="sub_title_size">16sp</dimen>
+    <dimen name="title_margin_top">100sp</dimen>
+    <dimen name="players_inputs_height">40sp</dimen>
+    <dimen name="players_pad">15sp</dimen>
+    <dimen name="game_info_margin_top">10sp</dimen>
+    <dimen name="sub_title_margin">50sp</dimen>
+    <dimen name="player1_margin_bot">4sp</dimen>
+    <dimen name="player1_margin_top">180sp</dimen>
+    <dimen name="button_margin_bot">30sp</dimen>
+    <dimen name="input_player2_margin_bot">60sp</dimen>
+</resources>
