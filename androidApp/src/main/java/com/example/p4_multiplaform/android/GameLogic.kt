@@ -132,43 +132,34 @@ abstract class GameLogic(context_: android.content.Context, mainLayout_: LinearL
         var bestScore = -1 // The best score
         var bestCol = -1 // The best column
 
-        // Browse the board
-        for (col in 0 until cols) {
-            if (this.board[col][0] != 0) { // If the column is full
-                continue // Go to the next column
+        for (col in 0 until cols) { // Browse the columns
+            if (this.board[col][0] != 0) { // If the column is full, skip it
+                continue // Skip the column
             }
 
-            // Get the score for the current column
-            val score = getScore(col, player)
+            val score = getScore(col, player) // Get the score for the column
 
-            // If the score is better than the best score
-            if (score > bestScore) {
-                bestScore = score // Update the best score
-                bestCol = col // Update the best column
+            if (score > bestScore) { // If the score is better than the best score so far (the AI is making a good move)
+                bestScore = score  // Set the best score to the score of the column (the better score)
+                bestCol = col // Set the best column to the column number (0-6)
             }
         }
 
-        // If no column has a better score
-        if (bestCol == -1) {
-            return -1
+        if (bestCol == -1) { // If the best column is -1, the AI is making a bad move
+            return -1 
         }
 
-        // Play the best column
         return move(bestCol, player)
     }
 
-    // Get the score for a given column
     private fun getScore(col: Int, player: Int): Int {
         var score = 0 // The score
 
-        // Browse the column
-        for (i in 0 until rows) {
-            // If the piece is empty
-            if (this.board[col][i] == 0) {
+        for (i in 0 until rows) { // Browse the column
+            if (this.board[col][i] == 0) { // If the row is empty
                 score += 1 // Add 1 to the score
             } else {
-                // If the piece is not empty and is not the player's piece (the opponent's piece)
-                if (this.board[col][i] == player) {
+                if (this.board[col][i] == player) { // If the row is occupied by the player
                     score += 2 // Add 2 to the score
                 } else {
                     score -= 1 // Subtract 1 from the score
