@@ -39,7 +39,7 @@ class Singleplayer(context_: android.content.Context,
     override fun game(col: Int) {
         if (!ended){ // If the game is not ended
             // Add a piece to the column
-            val row = play(col, player)
+            val row = move(col, player)
 
             if (row != -1) {
                 // Update the board

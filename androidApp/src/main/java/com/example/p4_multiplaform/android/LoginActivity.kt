@@ -19,8 +19,8 @@ class LoginActivity : AppCompatActivity() {
         // Set the button on click listener
         btn.setOnClickListener {
             // Get the players names
-            val namePlayer1 = player1.text.toString()
-            val namePlayer2 = player2.text.toString()
+            val namePlayer1 = player1.text.toString() // Get the player 1 name from the EditText
+            val namePlayer2 = player2.text.toString() // Get the player 2 name from the EditText
 
             if(namePlayer1.isEmpty() || namePlayer2.isEmpty()){
                 // Create a toast message
@@ -29,7 +29,6 @@ class LoginActivity : AppCompatActivity() {
                 toast.show()
 
             }else{
-
                 // Create the intent
                 val intent = Intent(this, GameActivity::class.java)
 

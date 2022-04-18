@@ -33,18 +33,18 @@ class Multiplayer(context_: android.content.Context, mainLayout_: LinearLayout,
         }
     }
 
-    override fun game(col: Int) {
-        if (!ended){
+    override fun game(col: Int) { // col is the column clicked by the user
+        if (!ended){ // If the game is not ended
             // Add a piece to the column
-            val row = play(col, player)
+            val row = move(col, player) // Get the row where the piece was added
 
-            if (row != -1) {
+            if (row != -1) { // If the piece was added
                 // Update the board
-                update(row, col)
+                update(row, col) // Update the board
 
-                val wonList = isWon(player)
-                when {
-                    wonList.isNotEmpty() -> {
+                val wonList = isWon(player) // Check if the player won the game
+                when { // Check if the player won the game
+                    wonList.isNotEmpty() -> { // If the player won
                         // End the game
                         ended = true
 
@@ -56,24 +56,25 @@ class Multiplayer(context_: android.content.Context, mainLayout_: LinearLayout,
 
                         highlightWinning(wonList)
                     }
-                    isDraw() -> {
+                    isDraw() -> { // If the game is a draw (no more moves)
                         // End the game
                         ended = true
 
                         // Set the layout user locked
                         mainLayout.isEnabled = false
 
-                        highlightWinning(ArrayList())
+                        highlightWinning(ArrayList()) // Highlight the winning moves (no winning moves) to show the draw
 
-                        // Update the message
+                        // Update the message to show the draw
                         currentPlayerEditText.text = ""
                         messageTextView.setText(R.string.draw)
                     }
-                    else -> {
-                        // Switch player
-                        player = if (player == 1) 2 else 1
+                    // else -> continue the game
+                    else -> { // If the game is not ended yet (no winning moves and no draw) and the player is player1
+                        // Switch player to player2 and update the message to show the current player is player2
+                        player = if (player == 1) 2 else 1 // Switch player (1 -> 2, 2 -> 1) (player1 -> player2, player2 -> player1)
 
-                        // Update next player
+                        // Update next player message
                         currentPlayerEditText.text = if (player == 1) player1 else player2
 
                         // Update the color of the current player with drawable
@@ -84,7 +85,7 @@ class Multiplayer(context_: android.content.Context, mainLayout_: LinearLayout,
                     }
                 }
             }
-            else{
+            else{ // If the piece was not added (column is full)
                 // Create the toast
                 val toast = android.widget.Toast.makeText(
                     context, "Can't play here", android.widget.Toast.LENGTH_SHORT
