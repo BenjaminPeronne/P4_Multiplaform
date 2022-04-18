@@ -15,7 +15,8 @@ Nom : <em>LAURETTA-PERONNE</em>
 <center>
 <a href="https://github.com/BenjaminPeronne/P4_Multiplaform.git">Lien GitHub</a> | 
   <a href="https://benjaminperonne.fr/dowload/Connect_Four.apk">Lien vers le téléchargement de l'application en apk </a> | 
-  <a href="https://benjaminperonne.fr/dowload/P4_Multiplatform_Rapport.pdf">Lien vers le PDF</a>
+  <a href="https://benjaminperonne.fr/dowload/P4_Multiplatform_Rapport.pdf">Lien vers le PDF</a> |
+  <a href="https://benjaminperonne.fr/src/blog_post/P4_Multiplatform_Rapport.html">Version Web</a>
 </center>
 
 ---
